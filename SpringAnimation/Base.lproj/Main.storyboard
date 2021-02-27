@@ -21,18 +21,34 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="bSx-dI-CU7"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Run"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="animationChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a2R-cv-bx8"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWI-VE-KhT">
-                                <rect key="frame" x="40" y="31" width="240" height="140"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWI-VE-KhT" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="40" y="32" width="240" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation parametrs" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EF1-1f-jag">
+                                        <rect key="frame" x="8" y="8" width="224" height="124"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.69981769626650325" blue="0.52643775941733661" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="EF1-1f-jag" firstAttribute="top" secondItem="HWI-VE-KhT" secondAttribute="top" constant="8" id="4dF-x0-FV9"/>
                                     <constraint firstAttribute="height" constant="140" id="DMf-vX-VQ3"/>
+                                    <constraint firstItem="EF1-1f-jag" firstAttribute="leading" secondItem="HWI-VE-KhT" secondAttribute="leading" constant="8" id="MRJ-ZX-c3w"/>
+                                    <constraint firstAttribute="trailing" secondItem="EF1-1f-jag" secondAttribute="trailing" constant="8" id="ZuF-ik-JP0"/>
+                                    <constraint firstAttribute="bottom" secondItem="EF1-1f-jag" secondAttribute="bottom" constant="8" id="nJZ-wM-rSr"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -53,6 +69,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HWI-VE-KhT" secondAttribute="trailing" constant="40" id="qpr-09-Jmj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationDescription" destination="EF1-1f-jag" id="jWf-uq-g9c"/>
+                        <outlet property="animationSpringView" destination="HWI-VE-KhT" id="Ydi-3f-2Nf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
